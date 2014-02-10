@@ -120,15 +120,6 @@
 + (void)registerColor:(UIColor *)color forName:(NSString *)name
 {
     name = [name lowercaseString];
-    
-#ifdef DEBUG
-    
-    //don't allow re-registration
-    NSAssert([self standardColors][name] == nil || [[self standardColors][name] isEquivalentToColor:color],
-             @"Cannot re-register the color '%@' as this is already assigned", name);
-    
-#endif
-
     [self standardColors][name] = color;
 }
 
