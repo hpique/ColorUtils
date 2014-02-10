@@ -129,7 +129,7 @@
     
 #endif
 
-    [self standardColors][[name lowercaseString]] = color;
+    [self standardColors][name] = color;
 }
 
 + (instancetype)colorWithString:(NSString *)string
